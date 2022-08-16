@@ -4,12 +4,12 @@ public class MyHashMap<K,V> {
     public MyHashMap() {
         this.linkedList = new LinkedList<>();
     }
+
     /* using search ,method of my linked list
-     * to get value.
-     */
+     * to get value.  */
     public V get(K key) {
         Node<K, V> mapNode = (Node<K, V>) this.linkedList.search(key);
-        if (mapNode == null){
+        if (mapNode == null) {
             return null;
         }
         else {
