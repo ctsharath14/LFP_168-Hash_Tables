@@ -30,4 +30,16 @@ public class MyHashMap<K,V> {
             mapNode.setValue(value);
         }
     }
+
+    /* function to remove node from hash table.
+     * first it checks if table is empty
+     *  then removes node using delete method of my linked list */
+    public V remove(K key) {
+        Node<K, V> mapNode = (Node<K, V>) this.linkedList.delete(key);
+        if (mapNode == null) {
+            System.out.println("Word is not present phrase");
+        }
+        return mapNode.getValue();
+
+    }
 }
